@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#01579B"
+    tools:context=".MainActivity">
+
+    <com.oneplus.example.camera3d.AnimView
+        android:id="@+id/anim_view"
+        android:layout_width="640dp"
+        android:layout_height="360dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="#B388FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarX"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:max="1000"
+        android:progress="500"
+        app:layout_constraintStart_toStartOf="@+id/anim_view"
+        app:layout_constraintEnd_toEndOf="@+id/anim_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarY"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:max="1000"
+        android:progress="500"
+        app:layout_constraintStart_toStartOf="@+id/anim_view"
+        app:layout_constraintEnd_toEndOf="@+id/anim_view"
+        app:layout_constraintTop_toBottomOf="@id/seekBarX" />
+
+    <SeekBar
+        android:orientation="vertical"
+        android:id="@+id/seekBarZ"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:max="1000"
+        android:progress="500"
+        app:layout_constraintStart_toStartOf="@+id/anim_view"
+        app:layout_constraintEnd_toEndOf="@+id/anim_view"
+        app:layout_constraintTop_toBottomOf="@id/seekBarY" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
