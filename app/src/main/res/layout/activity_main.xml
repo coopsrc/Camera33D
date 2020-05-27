@@ -9,49 +9,43 @@
 
     <com.oneplus.example.camera3d.AnimView
         android:id="@+id/anim_view"
-        android:layout_width="640dp"
-        android:layout_height="360dp"
-        android:layout_marginLeft="32dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:layout_marginRight="32dp"
         android:layout_marginBottom="32dp"
         android:background="#B388FF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <SeekBar
-        android:id="@+id/seekBarX"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:max="1000"
-        android:progress="500"
-        app:layout_constraintStart_toStartOf="@+id/anim_view"
-        app:layout_constraintEnd_toEndOf="@+id/anim_view"
+        app:layout_constraintDimensionRatio="w,300:238"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <SeekBar
-        android:id="@+id/seekBarY"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:max="1000"
-        android:progress="500"
-        app:layout_constraintStart_toStartOf="@+id/anim_view"
-        app:layout_constraintEnd_toEndOf="@+id/anim_view"
-        app:layout_constraintTop_toBottomOf="@id/seekBarX" />
 
-    <SeekBar
-        android:orientation="vertical"
+    <androidx.appcompat.widget.AppCompatSeekBar
         android:id="@+id/seekBarZ"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
         android:max="1000"
+        android:orientation="vertical"
         android:progress="500"
-        app:layout_constraintStart_toStartOf="@+id/anim_view"
-        app:layout_constraintEnd_toEndOf="@+id/anim_view"
-        app:layout_constraintTop_toBottomOf="@id/seekBarY" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/anim_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="onStartClick"
+        android:text="Start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

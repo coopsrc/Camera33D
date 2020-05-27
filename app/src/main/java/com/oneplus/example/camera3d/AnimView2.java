@@ -29,7 +29,7 @@ import java.util.Arrays;
  * <p>
  * Datetime: 2020-05-18 19:03
  */
-public class AnimView extends View {
+public class AnimView2 extends View {
     private static final String TAG = "AnimView";
 
     private static final float MaxDegree = 3.0f;
@@ -73,17 +73,17 @@ public class AnimView extends View {
 
     private boolean isLoop = false;
 
-    public AnimView(Context context) {
+    public AnimView2(Context context) {
         super(context);
         init(context, null, 0);
     }
 
-    public AnimView(Context context, @Nullable AttributeSet attrs) {
+    public AnimView2(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs, 0);
     }
 
-    public AnimView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public AnimView2(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);
     }
